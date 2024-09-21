@@ -52,6 +52,11 @@ title: Submit documentation updates
 		<label>Description:
 			<$edit-text tiddler=<<CONTRIBUTION_FORM_STATE>> field="pr-body" default="" tag="textarea" class="tc-edit-texteditor"/>
 		</label>
+		<$reveal type="nomatch" stateTitle=<<CONTRIBUTION_FORM_STATE>> stateField="pr-exists" text="yes" tag="div">
+			<label>Branch name (''optional''):
+				<$edit-text tiddler=<<CONTRIBUTION_FORM_STATE>> field="pr-branch" default="" tag="input" class="tc-edit-texteditor"/>
+			</label>
+		</$reveal>
 	</div>
 
 	<$let null={{$:/temp/refresh-token-status}}>
